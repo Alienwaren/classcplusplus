@@ -8,7 +8,6 @@ public:
 	int	odejmijzycie();
 	int zadaj_obrazenia();
 	~postac(void);
-protected:
 	int zycie;
 	int str;
 	float atk_spd;
