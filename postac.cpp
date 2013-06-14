@@ -2,24 +2,35 @@
 #include <iostream>
 #include <ctime>
 
+using namespace std;
 postac::postac(void)
 {
 }
-int postac::odejmijzycie()
+
+int postac::ustawZycie()
 {
-	postac gracz_1;
-	gracz_1.zycie = gracz_1.zycie - gracz_1.obrazenia;
-	std::cout << gracz_1.zycie;
+	cin >> zycie;
 	return zycie;
 }
 int postac::zadaj_obrazenia()
 {
 	srand(time(NULL));
-	int koncowe;
-	postac gracz_1;
-	gracz_1.obrazenia = (rand() % 5) + 1;
-	koncowe = gracz_1.obrazenia;
-	return koncowe;
+	obrazenia = rand() % 10 + 1;
+	zycie =  zycie -  obrazenia;
+	cout << zycie << endl;
+	return zycie;
+}
+void postac::ustawAtrybuty()
+{
+	przelicznik_uniku_na_punkt = 0.01;
+	cout << "Wprowadz atrybuty swojej nowej postaci\n Sila:";
+	cin >> str;
+	cout << "Inteligencja: " << endl;
+	cin >> intel;
+	cout << "Zrecznasc: " << endl;
+	cin >> agl;
+	unik = agl * przelicznik_uniku_na_punkt;
+	
 
 }
 

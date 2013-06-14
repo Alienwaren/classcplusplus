@@ -5,14 +5,21 @@ class postac
 {
 public:
 	postac(void);
-	int	odejmijzycie();
+	int ustawZycie();
 	int zadaj_obrazenia();
+	int porusz_postacia();
+	void ustawAtrybuty();
 	~postac(void);
+protected:
 	int zycie;
-	int str;
-	float atk_spd;
 	int obrazenia;
-	
+	int str;
+	int def;
+	int klasaPancerza;
+	int agl;
+	int intel;
+	int unik;
+	float przelicznik_uniku_na_punkt;
 };
 
-#endif //_H_POSTAC_
+#endif //  _H_POSTAC_
