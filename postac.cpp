@@ -7,31 +7,36 @@ postac::postac(void)
 {
 }
 
-int postac::ustawZycie()
-{
-	cin >> zycie;
-	return zycie;
-}
+
 int postac::zadaj_obrazenia()
 {
+	const float przelicznik_sily = 0.5f;
 	srand(time(NULL));
-	obrazenia = rand() % 10 + 1;
+	obrazenia_z_sily = str * przelicznik_sily;
+	cout << obrazenia_z_sily;
+	obrazenia = rand() % 10 + 1 + obrazenia_z_sily;
 	zycie =  zycie -  obrazenia;
-	cout << zycie << endl;
+	cout << "Zostalo zycia: " << zycie << endl;
 	return zycie;
 }
 void postac::ustawAtrybuty()
 {
-	przelicznik_uniku_na_punkt = 0.01;
+	const float przelicznik_na_spd = 0.01f;
+	cout << "Wprowadz zycie" << endl;
+	cin >> zycie;
 	cout << "Wprowadz atrybuty swojej nowej postaci\n Sila:";
 	cin >> str;
 	cout << "Inteligencja: " << endl;
 	cin >> intel;
 	cout << "Zrecznasc: " << endl;
 	cin >> agl;
-	unik = agl * przelicznik_uniku_na_punkt;
+	unik = agl * przelicznik_na_spd;
 	
 
+}
+int postac::ustawPancerz()
+{
+	return NULL;
 }
 
 postac::~postac(void)
