@@ -10,10 +10,10 @@ postac::postac(void)
 
 int postac::zadaj_obrazenia()
 {
-	const float przelicznik_sily = 0.5f;
+	const float przelicznik_sily = 2.f;
 	srand(time(NULL));
 	obrazenia_z_sily = str * przelicznik_sily;
-	cout << obrazenia_z_sily;
+	//cout << obrazenia_z_sily << endl;
 	obrazenia = rand() % 10 + 1 + obrazenia_z_sily;
 	zycie =  zycie -  obrazenia;
 	cout << "Zostalo zycia: " << zycie << endl;

@@ -5,7 +5,6 @@ class postac
 {
 public:
 	postac(void);
-	
 	int zadaj_obrazenia();
 	int porusz_postacia();
 	void ustawAtrybuty();
