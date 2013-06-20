@@ -19,6 +19,8 @@ public:
 	int intel;
 	int mana;
 	int pancerz;
+	int level;
+	int doswiadczenie;
 	float obrazenia_z_sily;
 	double unik;
 	

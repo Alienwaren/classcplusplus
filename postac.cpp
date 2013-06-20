@@ -39,12 +39,13 @@ int postac::ustawPancerz()
 {
 	armor szkielet;
 	pancerz = szkielet.ustawKlase();
-	cout << pancerz;
-	return NULL;
+	return pancerz;
 }
 int postac::ustawDef()
 {
-
+	const float przelicznik_str_def = 0.5f;
+	def = przelicznik_str_def * str;
+	return def;
 }
 
 postac::~postac(void)
