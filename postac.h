@@ -14,7 +14,7 @@ public:
 	int zycie;
 	float obrazenia;
 	int str;
-	int def;
+	
 	int agl;
 	int intel;
 	int mana;

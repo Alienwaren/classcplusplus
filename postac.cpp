@@ -6,11 +6,13 @@
 using namespace std;
 postac::postac(void)
 {
+	defence = 0;
 }
 
 
 int postac::zadaj_obrazenia()
 {
+	
 	const float przelicznik_sily_obr = 2.f;
 	srand(time(NULL));
 	obrazenia_z_sily = str * przelicznik_sily_obr;
@@ -43,9 +45,12 @@ int postac::ustawPancerz()
 }
 int postac::ustawDef()
 {
+	int defence = 0;
 	const float przelicznik_str_def = 0.5f;
-	def = przelicznik_str_def * str;
-	return def;
+	defence = przelicznik_str_def * str;
+	cout << endl << defence;
+		
+	return defence;
 }
 
 postac::~postac(void)
