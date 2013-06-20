@@ -6,5 +6,7 @@ class leather_armor : public armor
 public:
 	leather_armor(void);
 	~leather_armor(void);
+	int ustawPancerz();
+	int klasaPancerza;
 };
 

@@ -1,6 +1,7 @@
 #include "postac.h"
 #include <iostream>
 #include <ctime>
+#include "armor.h"
 
 using namespace std;
 postac::postac(void)
@@ -10,10 +11,9 @@ postac::postac(void)
 
 int postac::zadaj_obrazenia()
 {
-	const float przelicznik_sily = 2.f;
+	const float przelicznik_sily_obr = 2.f;
 	srand(time(NULL));
-	obrazenia_z_sily = str * przelicznik_sily;
-	//cout << obrazenia_z_sily << endl;
+	obrazenia_z_sily = str * przelicznik_sily_obr;
 	obrazenia = rand() % 10 + 1 + obrazenia_z_sily;
 	zycie =  zycie -  obrazenia;
 	cout << "Zostalo zycia: " << zycie << endl;
@@ -28,6 +28,7 @@ void postac::ustawAtrybuty()
 	cin >> str;
 	cout << "Inteligencja: " << endl;
 	cin >> intel;
+	mana = intel * 10;
 	cout << "Zrecznasc: " << endl;
 	cin >> agl;
 	unik = agl * przelicznik_na_spd;
@@ -36,7 +37,14 @@ void postac::ustawAtrybuty()
 }
 int postac::ustawPancerz()
 {
+	armor szkielet;
+	pancerz = szkielet.ustawKlase();
+	cout << pancerz;
 	return NULL;
+}
+int postac::ustawDef()
+{
+
 }
 
 postac::~postac(void)

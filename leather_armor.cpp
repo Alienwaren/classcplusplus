@@ -4,7 +4,7 @@
 
 leather_armor::leather_armor(void)
 {
-	
+	klasaPancerza = klasaBazowa + 5;
 }
 
 
